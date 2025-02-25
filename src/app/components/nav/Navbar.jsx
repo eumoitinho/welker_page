@@ -1,36 +1,52 @@
 "use client";
 import Link from 'next/link';
-import styles from '../styles/Navbar.module.css';
+import styles from '../../styles/Navbar.module.css';
 import Navlink from './Navlink';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid';
 import MenuOverlay from './MenuOverlay';
+import Image from 'next/image';
 
 const navLinks = [
     {
-        title: 'SOBRE',
-        path: '#about',
+        title: 'MUSIC',
+        path: '#music',
     },
     {
-        title: 'PROJETOS',
-        path: '#projects',
+        title: 'VIDEOS',
+        path: '#videos',
     },
     {
-        title: 'CONTATO',
+        title: 'DATES',
+        path: '#dates',
+    },
+    {
+        title: 'CONTACT',
         path: '#contact',
     }
 ]
 
 const Navbar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
     // Função para fechar o menu quando se clica em qualquer lugar fora do menu
     const handleCloseMenu = () => {
         setNavbarOpen(false);
     };
 
+    // Detectar scroll para adicionar o overlay
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 10); // Ativa o overlay após 10px de scroll
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll); // Limpa o evento ao desmontar
+    }, []);
+
     return (
-        <nav className={styles.navbar}>
+        <nav className={`${styles.navbar} ${isScrolled ? 'bg-gradient-to-b from-black/70 to-transparent' : 'bg-transparent'}`}>
             <div className="mobile-menu block md:hidden">
                 {!navbarOpen ? (
                     <button 
@@ -68,7 +84,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className={styles.logo}>
-                <Link href="/">Jauz Official</Link>
+                <Image width={50} height={50} src="/images/wtype.svg" alt="Logo" />
             </div>
         </nav>
     );

@@ -1,10 +1,16 @@
 import Image from "next/image";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/nav/Navbar";
+import { HeroSection } from "./components/HeroSection";
+import MusicSection from "./components/music/MusicSection";
+import VideoSection from "./components/video/VideoSection";
 
 export default function Home() {
   return (
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Navbar/>
-      </main>
+    <main className="flex flex-col min-h-screen">
+      <Navbar />
+      <HeroSection />
+      <MusicSection />
+      <VideoSection />
+    </main>
   );
 }
