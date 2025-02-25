@@ -28,6 +28,7 @@ const VideoSection = () => {
     <section
       ref={sectionRef}
       className="relative h-[100vh] overflow-hidden bg-gray-900 text-white"
+      id='videos'
     >
       {/* Background fixo com efeito parallax */}
       <div
