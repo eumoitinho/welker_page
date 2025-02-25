@@ -4,6 +4,7 @@ import { HeroSection } from "./components/HeroSection";
 import MusicSection from "./components/music/MusicSection";
 import VideoSection from "./components/video/VideoSection";
 import TourDates from "./components/dates/TourDates";
+import Footer from "./components/footer/Footer";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <MusicSection />
       <VideoSection />
       <TourDates />
+      <Footer />
     </main>
   );
 }
