@@ -3,52 +3,54 @@
 import React from 'react';
 
 const TourSection = () => {
-  // Dados de exemplo baseados na imagem fornecida
+  // Dados de exemplo com links adicionados
   const tourDates = [
     {
-      date: "FEB 28 FRI",
-      event: "SUBSTANCE @ 9:00 PM",
-      location: "Las Vegas, NV, United States",
+      date: "SAT APR 19",
+      event: "99 Scott’s courtyard @ 4:00 PM",
+      location: "New York, NY, United States",
+      ticketLink: "https://dice.fm/event/k63abp-ayybo-at-99-scott-courtyard-by-gray-area-19th-apr-99-scott-courtyard-new-york-city-tickets?lng=en-US", // Substitua pelo link real
+      infoLink: "https://dice.fm/event/k63abp-ayybo-at-99-scott-courtyard-by-gray-area-19th-apr-99-scott-courtyard-new-york-city-tickets?lng=en-US"    // Substitua pelo link real
     },
     {
-      date: "MAR 1 SAT",
-      event: "Mississippi Underground Hall @ 8:00 PM",
-      location: "St. Louis, MO, United States",
+      date: "FRI MAY 16",
+      event: "Odd Mob at The Concourse Project @ 9:00 PM",
+      location: "Austin, TX, United States",
+      ticketLink: "https://www.seetickets.us/event/Odd-Mob-at-The-Concourse-Project/637981", // Substitua pelo link real
+      infoLink: "https://www.seetickets.us/event/Odd-Mob-at-The-Concourse-Project/637981"      // Substitua pelo link real
     },
     {
-      date: "MAR 7 FRI",
-      event: "The Ave Live @ 9:00 PM",
-      location: "Philadelphia, PA, United States",
+      date: "TBA",
+      event: "TBA @ ??:00 PM",
+      location: "TBA",
+      ticketLink: "", // Sem link para eventos "TBA"
+      infoLink: ""    // Sem link para eventos "TBA"
     },
     {
-      date: "MAR 8 SAT",
-      event: "Kemistry Nightclub @ 9:00 PM",
-      location: "Fort Lauderdale, FL, United States",
+      date: "TBA",
+      event: "TBA @ ??:00 PM",
+      location: "TBA",
+      ticketLink: "",
+      infoLink: ""
     },
     {
-      date: "MAR 20 THU",
-      event: "The Church Denver @ 9:00 PM",
-      location: "Denver, CO, United States",
+      date: "TBA",
+      event: "TBA @ ??:00 PM",
+      location: "TBA",
+      ticketLink: "",
+      infoLink: ""
     },
     {
-      date: "MAR 22 SAT",
-      event: "45 East @ 10:00 PM",
-      location: "Portland, OR, United States",
+      date: "TBA",
+      event: "TBA @ ??:00 PM",
+      location: "TBA",
+      ticketLink: "",
+      infoLink: ""
     },
   ];
 
   return (
     <section id="dates" className="min-h-screen bg-black text-white p-4 md:p-8">
-      {/* Imagem do pôster do tour acima do conteúdo 
-      <div className="max-w-4xl mx-auto mb-8">
-        <img 
-          src="/images/tour-poster.jpg" // Substitua pelo caminho da sua imagem no diretório public
-          alt="WISE vs WICKED 2024 Tour Poster"
-          className="w-full h-auto object-cover rounded-lg shadow-md"
-          loading="lazy" // Melhora performance em telas menores
-        />
-      </div>*/}
-
       {/* Título "TOUR" centralizado */}
       <h1 className="text-4xl font-bold mt-8 mb-8 text-center uppercase">TOUR</h1>
 
@@ -57,7 +59,7 @@ const TourSection = () => {
         {/* Foto à esquerda */}
         <div className="w-full md:w-1/3 flex justify-center md:justify-start">
           <img 
-            src="/images/welkerphoto.png" // Substitua pelo caminho da foto fornecida no diretório public
+            src="/images/welkerphoto.jpg" // Substitua pelo caminho da foto fornecida no diretório public
             alt="Artist Photo"
             className="w-full max-w-[450px] h-auto object-cover rounded-lg shadow-md"
             loading="lazy" // Melhora performance em telas menores
@@ -75,14 +77,28 @@ const TourSection = () => {
                 <p className="text-gray-400 text-sm">{tour.location}</p>
               </div>
 
-              {/* Botões "TICKETS" e "RSVP" */}
+              {/* Botões "TICKETS" e "INFOS" */}
               <div className="flex gap-4">
-                <button className="px-4 py-2 bg-transparent border border-white text-white rounded text-sm font-semibold hover:bg-white hover:text-black transition-colors duration-200">
+                <a 
+                  href={tour.ticketLink || "#"} // Usa "#" como fallback se não houver link
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className={`px-4 py-2 bg-transparent border border-white text-white rounded text-sm font-semibold transition-colors duration-200 ${
+                    !tour.ticketLink ? "opacity-50 cursor-not-allowed" : "hover:bg-white hover:text-black"
+                  }`}
+                >
                   TICKETS
-                </button>
-                <button className="px-4 py-2 bg-transparent border border-white text-white rounded text-sm font-semibold hover:bg-white hover:text-black transition-colors duration-200">
+                </a>
+                <a 
+                  href={tour.infoLink || "#"} // Usa "#" como fallback se não houver link
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className={`px-4 py-2 bg-transparent border border-white text-white rounded text-sm font-semibold transition-colors duration-200 ${
+                    !tour.infoLink ? "opacity-50 cursor-not-allowed" : "hover:bg-white hover:text-black"
+                  }`}
+                >
                   INFOS
-                </button>
+                </a>
               </div>
             </div>
           ))}

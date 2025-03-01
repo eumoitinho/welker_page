@@ -1,16 +1,21 @@
 "use client";
 
 // components/MusicCard.js
-import React from 'react';
+import React from "react";
 
-const MusicCard = ({ title, imageUrl }) => {
+const MusicCard = ({ title, imageUrl, link }) => {
   return (
-    <div className="w-full max-w-[550px] bg-black text-white shadow-lg overflow-hidden md:hover:scale-105 transition-all duration-50">
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-full max-w-[550px] bg-black text-white shadow-lg overflow-hidden md:hover:scale-105 transition-all duration-50 block"
+    >
       {/* Imagem do álbum */}
       <div className="h-[550px] w-full relative">
-        <img 
-          src={imageUrl} 
-          alt={`${title} album cover`} 
+        <img
+          src={imageUrl}
+          alt={`${title} album cover`}
           className="w-full h-full object-cover"
           loading="lazy" // Melhora performance em telas menores
         />
@@ -24,32 +29,30 @@ const MusicCard = ({ title, imageUrl }) => {
           {title}
         </h3>
       </div>
-    </div>
+    </a>
   );
 };
 
 // Componente pai para renderizar múltiplos cards com botões fora dos cards
 const MusicGrid = () => {
-  // Dados de exemplo
+  // Dados de exemplo com links
   const musicItems = [
     {
       title: "Element",
       imageUrl: "https://i1.sndcdn.com/artworks-KNQytcAmBs2BbodH-CESBOw-t500x500.jpg",
+      link: "https://soundcloud.com/diynamic-music/welker-element", // Substitua pelo link real
     },
     {
       title: "EDMID Guest Mix 451",
       imageUrl: "https://i1.sndcdn.com/artworks-jMMzsPErJYs1LD7N-ttqbfw-t500x500.jpg",
+      link: "https://soundcloud.com/edmidentity/edmid-guest-mix-451-welker", // Substitua pelo link real
     },
     {
-      title: "Top Board Radio 02 - WELKER",
-      imageUrl: "https://i1.sndcdn.com/artworks-j6wI3mt5DQP5xAK5-bHf7Qw-t500x500.jpg",
+      title: "Repopulation Mars - Instagram Reels",
+      imageUrl: "./images/postig.png",
+      link: "https://www.instagram.com/reel/DGgiTjQSuZd/?igsh=NTc4MTIwNjQ2YQ%3D%3D", // Substitua pelo link real do Instagram
     },
   ];
-
-  const handleListenClick = (title) => {
-    console.log(`Playing ${title}`);
-    // Aqui você pode adicionar a lógica para reproduzir a música
-  };
 
   return (
     <div className="min-h-screen bg-black p-4 md:p-8">
@@ -60,24 +63,28 @@ const MusicGrid = () => {
             <MusicCard
               title={item.title}
               imageUrl={item.imageUrl}
+              link={item.link}
             />
-            {/* Botão de ouvir fora do card, outline branco */}
-            <button
-              onClick={() => handleListenClick(item.title)}
+            {/* Botão de ouvir fora do card, redirecionando para o link */}
+            <a
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-4 px-6 py-2 border-2 border-white text-white rounded-full font-semibold transition-all duration-200 hover:bg-white hover:text-black"
             >
               <span className="flex items-center justify-center gap-2">
-                <span className="text-sm uppercase">▶</span>
                 LISTEN
               </span>
-            </button>
+            </a>
           </div>
         ))}
       </div>
       <div className="col-span-12 flex justify-center mt-12 md:mt-16">
-        <a 
-          href="https://soundcloud.com/welkermusic" 
+        <a
+          href="https://soundcloud.com/welkermusic"
           className="text-xl font-bold text-white uppercase"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           View more music
         </a>

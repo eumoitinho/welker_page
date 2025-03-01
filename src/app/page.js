@@ -5,6 +5,7 @@ import MusicSection from "./components/music/MusicSection";
 import VideoSection from "./components/video/VideoSection";
 import TourDates from "./components/dates/TourDates";
 import Footer from "./components/footer/Footer";
+import EmailSection from "./components/footer/EmailSection";
 
 // Definindo os metadados como um objeto exportado
 export const metadata = {
@@ -21,11 +22,14 @@ export default function Home() {
   return (
     <main className="flex flex-col min-h-screen">
       <Navbar />
+      
       <HeroSection />
       <MusicSection />
       <VideoSection />
       <TourDates />
-      <Footer />
+      <div className="container mx-auto mt-24 px-12 py-4">
+      <EmailSection />
+      </div>
     </main>
   );
 }
