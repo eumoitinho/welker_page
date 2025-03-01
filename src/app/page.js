@@ -12,7 +12,7 @@ export const metadata = {
   openGraph: {
     title: "WELKER", // Título para SEO
     images: [
-      "https://drive.google.com/file/d/1zxswt_ilpunCC4k1Nmu3PyYlxLIkgyd5/view?usp=sharing" // URL da imagem para SEO
+      "./images/herobg.png" // URL da imagem para SEO
     ]
   }
 };
