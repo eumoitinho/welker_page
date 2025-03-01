@@ -17,7 +17,7 @@ const overpasSans = Overpass({
 });
 
 export const metadata = {
-  title: "Welker",
+  title: "WELKER",
   description: "Electronic music producer and DJ",
 };
 
