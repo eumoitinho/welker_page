@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Navbar from "./components/nav/Navbar";
-import { HeroSection } from "./components/HeroSection";
+import { HeroSection } from "./components/hero/HeroSection";
 import MusicSection from "./components/music/MusicSection";
 import VideoSection from "./components/video/VideoSection";
 import TourDates from "./components/dates/TourDates";
