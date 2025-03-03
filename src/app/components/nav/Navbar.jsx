@@ -9,6 +9,10 @@ import Image from 'next/image';
 
 const navLinks = [
     {
+        title: 'HOME',
+        path: './',
+    },
+    {
         title: 'MUSIC',
         path: '#music',
     },
@@ -82,7 +86,7 @@ const Navbar = () => {
                 <ul className={styles.navLinks}>
                     {navLinks.map((link, index) => (
                         <li key={index}>
-                            <Navlink href={link.path} title={link.title} />
+                            <Navlink href={link.path} title={link.title}/>
                         </li>
                     ))}
                 </ul>

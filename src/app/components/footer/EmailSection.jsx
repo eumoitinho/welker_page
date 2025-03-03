@@ -128,11 +128,16 @@ const EmailSection = () => {
             </svg>
           </Link>
           <Link href="https://www.youtube.com/@musicwelker" target="_blank">
-          <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="white">
-  <path d="M23.499 6.203c-.273-1.422-1.45-2.537-2.901-2.802C18.145 3 12 3 12 3s-6.145 0-8.598.401C1.95 3.666.773 4.781.5 6.203.133 8.097 0 12 0 12s.133 3.903.5 5.797c.273 1.422 1.45 2.537 2.901 2.802C5.855 21 12 21 12 21s6.145 0 8.598-.401c1.451-.265 2.628-1.38 2.901-2.802.367-1.894.501-5.797.501-5.797s-.134-3.903-.501-5.797zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-</svg>
-</Link>
-
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="45"
+              height="45"
+              viewBox="0 0 24 24"
+              fill="white"
+            >
+              <path d="M23.499 6.203c-.273-1.422-1.45-2.537-2.901-2.802C18.145 3 12 3 12 3s-6.145 0-8.598.401C1.95 3.666.773 4.781.5 6.203.133 8.097 0 12 0 12s.133 3.903.5 5.797c.273 1.422 1.45 2.537 2.901 2.802C5.855 21 12 21 12 21s6.145 0 8.598-.401c1.451-.265 2.628-1.38 2.901-2.802.367-1.894.501-5.797.501-5.797s-.134-3.903-.501-5.797zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+          </Link>
         </div>
       </div>
       <div className="z-10">
@@ -235,6 +240,27 @@ const EmailSection = () => {
             )}
           </button>
         </form>
+      </div>
+      {/* Links adicionais no final da seção */}
+      <div className="z-10 mt-8 flex justify-center gap-6 w-full col-span-2">
+        <Link
+          href="#contact"
+          className="text-white text-sm font-medium hover:text-[#6e1212] transition-colors"
+        >
+          CONTACT
+        </Link>
+        <Link
+          href="/privacy"
+          className="text-white text-sm font-medium hover:text-[#6e1212] transition-colors"
+        >
+          PRIVACY
+        </Link>
+        <Link
+          href="/terms"
+          className="text-white text-sm font-medium hover:text-[#6e1212] transition-colors"
+        >
+          TERMS OF SERVICE
+        </Link>
       </div>
     </section>
   );
