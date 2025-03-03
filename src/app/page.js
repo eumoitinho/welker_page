@@ -30,6 +30,7 @@ export default function Home() {
       <div className="container mx-auto mt-24 px-12 py-4">
       <EmailSection />
       </div>
+      <Footer />
     </main>
   );
 }

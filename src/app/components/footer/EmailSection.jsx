@@ -242,27 +242,9 @@ const EmailSection = () => {
         </form>
       </div>
       {/* Links adicionais no final da seção */}
-      <div className="z-10 mt-8 flex justify-center gap-6 w-full col-span-2">
-        <Link
-          href="#contact"
-          className="text-white text-sm font-medium hover:text-[#6e1212] transition-colors"
-        >
-          CONTACT
-        </Link>
-        <Link
-          href="/privacy"
-          className="text-white text-sm font-medium hover:text-[#6e1212] transition-colors"
-        >
-          PRIVACY
-        </Link>
-        <Link
-          href="/terms"
-          className="text-white text-sm font-medium hover:text-[#6e1212] transition-colors"
-        >
-          TERMS OF SERVICE
-        </Link>
-      </div>
+      
     </section>
+    
   );
 };
 

@@ -25,6 +25,7 @@ const PrivacyPage = () => {
       <div className="container mx-auto mt-24 px-12 py-4">
       <EmailSection />
       </div>
+      <Footer />
     </div>
   );
 };
