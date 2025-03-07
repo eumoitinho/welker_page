@@ -13,7 +13,7 @@ export const metadata = {
   openGraph: {
     title: "WELKER", // Título para SEO
     images: [
-      "./images/herobg.png" // URL da imagem para SEO
+      "https://i1.sndcdn.com/avatars-DE4T0OaBhGxYthkK-XA2dXA-t200x200.jpg" // URL da imagem para SEO
     ]
   }
 };

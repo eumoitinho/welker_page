@@ -51,7 +51,7 @@ const VideoSection = () => {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/BnGmns9hg1Y?t=4509" // Substitua pelo ID do seu vídeo do YouTube
+              src="https://www.youtube.com/watch?v=TcTzPJs01CQ" // Substitua pelo ID do seu vídeo do YouTube
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

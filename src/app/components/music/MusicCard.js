@@ -43,9 +43,9 @@ const MusicGrid = () => {
       link: "https://soundcloud.com/diynamic-music/welker-element", // Substitua pelo link real
     },
     {
-      title: "EDMID Guest Mix 451",
-      imageUrl: "https://i1.sndcdn.com/artworks-jMMzsPErJYs1LD7N-ttqbfw-t500x500.jpg",
-      link: "https://soundcloud.com/edmidentity/edmid-guest-mix-451-welker", // Substitua pelo link real
+      title: "Everybody EP",
+      imageUrl: "https://i1.sndcdn.com/artworks-Drl6AYm71zFIQR8B-POy5fA-t500x500.png",
+      link: "https://soundcloud.com/repopulatemars/sets/welker-everybody", // Substitua pelo link real
     },
     {
       title: "Repopulation Mars - Instagram Reels",
