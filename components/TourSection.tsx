@@ -7,7 +7,7 @@ const tourDates = [
   {
     id: 1,
     date: "SAT APR 19",
-    event: "Grey Area @ 4:00 PM",
+    event: "TBA",
     location: "99 Scott (Courtyard), Brooklyn, NY, United States",
     ticketLink: "#",
     infoLink: "#",
@@ -15,7 +15,7 @@ const tourDates = [
   {
     id: 2,
     date: "FRI MAY 16",
-    event: "Secret Warehouse @ 9:00 PM",
+    event: "TBA",
     location: "Austin, TX, United States",
     ticketLink: "#",
     infoLink: "#",
@@ -23,7 +23,7 @@ const tourDates = [
   {
     id: 3,
     date: "SAT JUN 22",
-    event: "Summer Festival @ 8:00 PM",
+    event: "TBA",
     location: "Miami, FL, United States",
     ticketLink: "#",
     infoLink: "#",
@@ -31,7 +31,7 @@ const tourDates = [
   {
     id: 4,
     date: "FRI JUL 12",
-    event: "Club Night @ 11:00 PM",
+    event: "TBA",
     location: "Los Angeles, CA, United States",
     ticketLink: "#",
     infoLink: "#",
